@@ -39,8 +39,5 @@ document.addEventListener("DOMContentLoaded", () => {
         return normalTextField.value.toUpperCase().split('').map(char => {
             return natoAlphabet[char] || char;
         }).join(' ');
-        natoTextField.value = ""; 
     }
-
-
 });
