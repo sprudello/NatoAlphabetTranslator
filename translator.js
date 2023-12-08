@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const natoTextField = document.getElementById("natoText");
 
     const natoAlphabet = {
-        'A': 'Alfa',
+        'A': 'Alpha',
         'B': 'Bravo',
         'C': 'Charlie',
         'D': 'Delta',
@@ -37,20 +37,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
     function translateFromNormalToNato(){
         return normalTextField.value.toUpperCase().split('').map(char => {
-            if (char === ' ') {
-                //nothing
-            } else {
-                return natoAlphabet[char] || char;
-            }
-        }).join(' '); 
+            return natoAlphabet[char] || char;
+        }).join(' ');
+        natoTextField.value = ""; 
     }
-    
-    function copyToClipboard() {
-        let text = document.getElementById('natoText').textContent;
-        navigator.clipboard.writeText(text).then(() => {
-            alert('Text copied to clipboard');
-        }).catch(err => {
-            console.error('Error in copying text: ', err);
-        });
+
 
 });
