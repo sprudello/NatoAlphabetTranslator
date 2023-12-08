@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const natoTextField = document.getElementById("natoText");
 
     const natoAlphabet = {
-        'A': 'Alpha',
+        'A': 'Alfa',
         'B': 'Bravo',
         'C': 'Charlie',
         'D': 'Delta',
@@ -44,6 +44,13 @@ document.addEventListener("DOMContentLoaded", () => {
             }
         }).join(' '); 
     }
-
+    
+    function copyToClipboard() {
+        let text = document.getElementById('natoText').textContent;
+        navigator.clipboard.writeText(text).then(() => {
+            alert('Text copied to clipboard');
+        }).catch(err => {
+            console.error('Error in copying text: ', err);
+        });
 
 });
