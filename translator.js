@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const natoTextField = document.getElementById("natoText");
 
     const natoAlphabet = {
-        'A': 'Alpha',
+        'A': 'Alfa',
         'B': 'Bravo',
         'C': 'Charlie',
         'D': 'Delta',
